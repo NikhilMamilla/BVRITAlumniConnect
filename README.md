@@ -1,8 +1,68 @@
-# Welcome to your Lovable project
+# BVRIT Alumni Connect Platform
+
+A comprehensive platform for BVRIT alumni and students to connect, network, and grow together.
 
 ## Project info
 
 **URL**: https://lovable.dev/projects/160a8a3c-6d70-4a1a-833a-73f7367f0e55
+
+## Environment Setup
+
+Before running the project, you need to set up environment variables:
+
+### Frontend Environment Variables
+Create a `.env` file in the root directory with the following variables:
+
+```env
+# Firebase configuration
+VITE_FIREBASE_API_KEY=your_firebase_api_key_here
+VITE_FIREBASE_AUTH_DOMAIN=your_project_id.firebaseapp.com
+VITE_FIREBASE_PROJECT_ID=your_project_id
+VITE_FIREBASE_STORAGE_BUCKET=your_project_id.firebasestorage.app
+VITE_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
+VITE_FIREBASE_APP_ID=your_app_id
+VITE_FIREBASE_MEASUREMENT_ID=your_measurement_id
+
+# Gemini AI API
+VITE_GEMINI_API_KEY=your_gemini_api_key_here
+```
+
+### Backend Environment Variables
+Create a `.env` file in the `backend` directory with the following variables:
+
+```env
+# Server Configuration
+PORT=5000
+
+# Gmail Configuration
+GMAIL_USER=your_gmail_address@gmail.com
+GMAIL_APP_PASSWORD=your_gmail_app_password_here
+
+# Admin Configuration
+ADMIN_EMAIL=your_admin_email@domain.com
+
+# CORS Configuration
+CORS_ORIGIN=http://localhost:3000
+```
+
+### How to get the required API keys:
+
+1. **Firebase Configuration**: 
+   - Go to [Firebase Console](https://console.firebase.google.com/)
+   - Create a new project or select existing one
+   - Go to Project Settings > General
+   - Scroll down to "Your apps" section
+   - Copy the configuration values
+
+2. **Gemini API Key**:
+   - Go to [Google AI Studio](https://makersuite.google.com/app/apikey)
+   - Create a new API key
+   - Copy the key to your environment file
+
+3. **Gmail App Password**:
+   - Enable 2-factor authentication on your Gmail account
+   - Go to Google Account settings > Security
+   - Generate an App Password for this application
 
 ## How can I edit this code?
 
