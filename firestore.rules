@@ -1,0 +1,206 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Helper Functions
+    function isAuth() {
+      return request.auth != null;
+    }
+    
+    function isOwner(userId) {
+      return isAuth() && request.auth.uid == userId;
+    }
+
+    // Admins can do anything
+    match /{path=**}/documents/{docId} {
+        allow read, write: if get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+    }
+
+    // Users collection: Read own, update own
+    match /users/{userId} {
+      allow read, update: if isOwner(userId);
+      allow create: if isAuth();
+    }
+    
+    // Profiles can be read by any authenticated user, but only updated by the owner
+    match /alumni_profiles/{profileId} {
+        allow read: if isAuth();
+        allow create: if isAuth() && isOwner(request.resource.data.userId);
+        allow update, delete: if isAuth() && isOwner(resource.data.userId);
+    }
+
+    match /students/{studentId} {
+        allow read: if isAuth();
+        allow create: if isAuth() && isOwner(request.resource.data.userId);
+        allow update, delete: if isAuth() && isOwner(resource.data.userId);
+    }
+
+    // Events: readable by all authenticated users, writable by owner
+    match /events/{eventId} {
+      allow read: if isAuth();
+      allow create: if isAuth();
+      allow update, delete: if isAuth() && isOwner(resource.data.creatorId);
+    }
+    
+    // Registrations: User can only manage their own registrations
+    match /registrations/{regId} {
+        allow read, create: if isAuth() && isOwner(request.resource.data.userId);
+        allow delete: if isAuth() && isOwner(resource.data.userId);
+    }
+
+    // Opportunities: readable by all, writable by owner
+    match /opportunities/{oppId} {
+      allow read: if isAuth();
+      allow create: if isAuth();
+      allow update, delete: if isAuth() && isOwner(resource.data.creatorId);
+    }
+    
+    // Applications: Readable by applicant and opportunity creator, writable by applicant
+    match /applications/{appId} {
+        allow read: if isAuth() && (isOwner(resource.data.applicantId) || isOwner(get(/databases/$(database)/documents/opportunities/$(resource.data.opportunityId)).data.creatorId));
+        allow create: if isAuth() && isOwner(request.resource.data.applicantId);
+        allow update, delete: if isAuth() && isOwner(resource.data.applicantId);
+    }
+
+    // Mentorship Requests: Can be read by student or mentor, created by anyone, updated by participants
+    match /mentorshipRequests/{reqId} {
+        allow read, update: if isAuth() && (isOwner(resource.data.studentId) || isOwner(resource.data.mentorId));
+        allow create: if isAuth();
+        allow delete: if isAuth() && (isOwner(resource.data.studentId) || isOwner(resource.data.mentorId));
+    }
+    
+    // Mentorships: Can be accessed by participants
+    match /mentorships/{mentorId} {
+        allow read, update, delete: if isAuth() && (isOwner(resource.data.studentId) || isOwner(resource.data.mentorId));
+        allow create: if isAuth();
+    }
+    
+    // Meetings: Can be accessed by participants
+    match /meetings/{meetingId} {
+        allow read, update, delete: if isAuth() && (isOwner(resource.data.studentId) || isOwner(resource.data.alumniId));
+        allow create: if isAuth();
+    }
+
+    // Notifications: Can only be accessed by the recipient
+    match /notifications/{notificationId} {
+        allow read, update, delete: if isAuth() && isOwner(resource.data.recipientId);
+        allow create: if isAuth();
+    }
+
+    // Verifications: Users can create their own, admins can read/update
+    match /verifications/{userId} {
+        allow create: if isAuth() && isOwner(userId);
+        allow read, update, delete: if get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+    }
+
+    // Communities: Readable by all, writable by owner/admin
+    match /communities/{communityId} {
+      allow read: if isAuth();
+      allow create: if isAuth();
+      // Add logic for moderators later
+      allow update, delete: if isAuth() && isOwner(resource.data.owner.id);
+
+      // Community Subcollections
+      match /{subcollection}/{docId} {
+        allow read: if isAuth();
+        allow write: if isAuth(); // This is permissive for now, should be tightened
+      }
+
+      // Discussions subcollection
+      match /discussions/{discussionId} {
+        allow read: if isAuth();
+        allow create: if isAuth();
+        allow update, delete: if isAuth() && isOwner(resource.data.authorId);
+        // Replies subcollection under community discussions
+        match /replies/{replyId} {
+          allow read: if isAuth();
+          allow create: if isAuth();
+          allow update, delete: if isAuth() && isOwner(resource.data.authorId);
+        }
+      }
+      // PinnedDiscussions subcollection
+      match /pinnedDiscussions/{pinnedId} {
+        allow read: if isAuth();
+        allow create: if isAuth();
+        allow update, delete: if isAuth() && isOwner(resource.data.authorId);
+      }
+    }
+
+    // Community Members: allow users to create, read, update, and delete their own membership doc
+    match /communityMembers/{docId} {
+      allow read, create, update, delete: if isAuth();
+    }
+
+    // Community Events: allow authenticated users to read, only creator can write
+    match /communityEvents/{eventId} {
+      allow read: if isAuth();
+      allow create: if isAuth();
+      allow update, delete: if isAuth() && isOwner(resource.data.createdBy);
+    }
+
+    // Top-level Discussions collection (for global queries)
+    match /discussions/{discussionId} {
+      allow read: if isAuth();
+      allow create: if isAuth();
+      allow update, delete: if isAuth() && isOwner(resource.data.authorId);
+      // Replies subcollection under discussions
+      match /replies/{replyId} {
+        allow read: if isAuth();
+        allow create: if isAuth();
+        allow update, delete: if isAuth() && isOwner(resource.data.authorId);
+      }
+    }
+
+    // Top-level Chat Messages collection
+    match /chatMessages/{messageId} {
+      allow read: if isAuth();
+      allow create: if isAuth();
+      allow update, delete: if isAuth() && isOwner(resource.data.authorId);
+    }
+
+    // Top-level Online Presence collection
+    match /onlinePresence/{presenceId} {
+      allow read, write: if isAuth();
+    }
+    // Top-level Typing Indicators collection
+    match /typingIndicators/{typingId} {
+      allow read, write: if isAuth();
+    }
+
+    // Trending Tags and Analytics: allow read for authenticated users
+    match /trendingTags/{docId} {
+      allow read: if isAuth();
+    }
+    match /analytics/{docId} {
+      allow read: if isAuth();
+    }
+
+    // Replies under top-level discussions
+    match /discussions/{discussionId}/replies/{replyId} {
+      allow read: if true;
+      allow create: if isAuth();
+      allow update, delete: if isAuth() && isOwner(resource.data.authorId);
+    }
+    // Replies under community-level discussions
+    match /communities/{communityId}/discussions/{discussionId}/replies/{replyId} {
+      allow read: if isAuth();
+      allow create: if isAuth();
+      allow update, delete: if isAuth() && isOwner(resource.data.authorId);
+    }
+    // Community Analytics and Trending Tags (both possible collection names)
+    match /communityAnalytics/{docId} {
+      allow read: if isAuth();
+    }
+    match /analytics/{docId} {
+      allow read: if isAuth();
+    }
+
+    // Top-level discussionReplies collection
+    match /discussionReplies/{replyId} {
+      allow read: if true;
+      allow create: if isAuth();
+      allow update, delete: if isAuth() && isOwner(resource.data.authorId);
+    }
+  }
+}

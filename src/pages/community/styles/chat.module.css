@@ -1,0 +1,387 @@
+/* chat.module.css */
+
+
+/* ==================== CHAT CONTAINERS ==================== */
+
+.chatContainer {
+    @apply flex flex-col h-full bg-white dark:bg-slate-800;
+}
+
+.chatHeader {
+    @apply flex items-center justify-between p-4 border-b border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800;
+}
+
+.chatHeaderInfo {
+    @apply flex items-center space-x-3;
+}
+
+.chatHeaderTitle {
+    @apply text-lg font-semibold text-slate-900 dark:text-slate-100;
+}
+
+.chatHeaderSubtitle {
+    @apply text-sm text-slate-600 dark:text-slate-400;
+}
+
+.chatHeaderActions {
+    @apply flex items-center space-x-2;
+}
+
+.chatMessages {
+    @apply flex-1 overflow-y-auto p-4 space-y-4;
+}
+
+.chatInput {
+    @apply border-t border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-4;
+}
+
+
+/* ==================== MESSAGE STYLES ==================== */
+
+.messageContainer {
+    @apply flex space-x-3;
+}
+
+.messageContainerOwn {
+    @apply flex-row-reverse space-x-reverse space-x-3;
+}
+
+.messageAvatar {
+    @apply flex-shrink-0 w-8 h-8 rounded-full bg-slate-300 dark:bg-slate-600 flex items-center justify-center;
+}
+
+.messageContent {
+    @apply flex-1 max-w-[70%];
+}
+
+.messageContentOwn {
+    @apply max-w-[70%];
+}
+
+.messageBubble {
+    @apply rounded-lg px-4 py-2 text-sm;
+}
+
+.messageBubbleOwn {
+    @apply bg-blue-600 text-white;
+}
+
+.messageBubbleOther {
+    @apply bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-slate-100;
+}
+
+.messageBubbleSystem {
+    @apply bg-yellow-100 dark:bg-yellow-900/20 text-yellow-800 dark:text-yellow-200 text-center;
+}
+
+.messageHeader {
+    @apply flex items-center justify-between mb-1;
+}
+
+.messageHeaderOwn {
+    @apply flex-row-reverse;
+}
+
+.messageSender {
+    @apply text-xs font-medium text-slate-600 dark:text-slate-400;
+}
+
+.messageSenderOwn {
+    @apply text-blue-200;
+}
+
+.messageTime {
+    @apply text-xs text-slate-500 dark:text-slate-500;
+}
+
+.messageTimeOwn {
+    @apply text-blue-200;
+}
+
+.messageText {
+    @apply break-words;
+}
+
+.messageTextOwn {
+    @apply text-white;
+}
+
+.messageTextOther {
+    @apply text-slate-900 dark:text-slate-100;
+}
+
+
+/* ==================== MESSAGE TYPES ==================== */
+
+.messageImage {
+    @apply rounded-lg max-w-full max-h-64 object-cover;
+}
+
+.messageFile {
+    @apply flex items-center space-x-2 p-2 bg-slate-50 dark:bg-slate-700 rounded border;
+}
+
+.messageFileIcon {
+    @apply w-8 h-8 text-slate-500 dark:text-slate-400;
+}
+
+.messageFileInfo {
+    @apply flex-1 min-w-0;
+}
+
+.messageFileName {
+    @apply text-sm font-medium text-slate-900 dark:text-slate-100 truncate;
+}
+
+.messageFileSize {
+    @apply text-xs text-slate-500 dark:text-slate-400;
+}
+
+.messageReactions {
+    @apply flex items-center space-x-1 mt-1;
+}
+
+.messageReaction {
+    @apply inline-flex items-center space-x-1 px-2 py-1 rounded-full text-xs bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300;
+}
+
+.messageReactionOwn {
+    @apply bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300;
+}
+
+
+/* ==================== CHAT INPUT ==================== */
+
+.chatInputContainer {
+    @apply flex items-end space-x-3;
+}
+
+.chatInputField {
+    @apply flex-1;
+}
+
+.chatTextarea {
+    @apply w-full px-3 py-2 border border-slate-300 rounded-lg resize-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:border-slate-600 dark:text-slate-100;
+    min-height: 40px;
+    max-height: 120px;
+}
+
+.chatInputActions {
+    @apply flex items-center space-x-2;
+}
+
+.chatInputButton {
+    @apply p-2 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors;
+}
+
+.chatSendButton {
+    @apply p-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors;
+}
+
+.chatSendButtonDisabled {
+    @apply bg-slate-300 dark:bg-slate-600 text-slate-500 dark:text-slate-400 cursor-not-allowed;
+}
+
+
+/* ==================== CHAT FEATURES ==================== */
+
+.chatTypingIndicator {
+    @apply flex items-center space-x-2 text-sm text-slate-500 dark:text-slate-400 italic;
+}
+
+.chatTypingDots {
+    @apply flex space-x-1;
+}
+
+.chatTypingDot {
+    @apply w-2 h-2 bg-slate-400 dark:bg-slate-500 rounded-full animate-pulse;
+}
+
+.chatTypingDot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.chatTypingDot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.chatScrollToBottom {
+    @apply fixed bottom-20 right-4 p-2 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-colors;
+}
+
+.chatUnreadIndicator {
+    @apply absolute -top-1 -right-1 w-4 h-4 bg-red-500 text-white text-xs rounded-full flex items-center justify-center;
+}
+
+
+/* ==================== CHAT SIDEBAR ==================== */
+
+.chatSidebar {
+    @apply w-80 bg-white dark:bg-slate-800 border-l border-slate-200 dark:border-slate-700;
+}
+
+.chatSidebarHeader {
+    @apply p-4 border-b border-slate-200 dark:border-slate-700;
+}
+
+.chatSidebarTitle {
+    @apply text-lg font-semibold text-slate-900 dark:text-slate-100;
+}
+
+.chatSidebarContent {
+    @apply p-4;
+}
+
+.chatSidebarSection {
+    @apply mb-6;
+}
+
+.chatSidebarSectionTitle {
+    @apply text-sm font-medium text-slate-700 dark:text-slate-300 mb-3;
+}
+
+
+/* ==================== CHAT PARTICIPANTS ==================== */
+
+.chatParticipants {
+    @apply space-y-2;
+}
+
+.chatParticipant {
+    @apply flex items-center space-x-3 p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-700;
+}
+
+.chatParticipantAvatar {
+    @apply w-8 h-8 rounded-full bg-slate-300 dark:bg-slate-600;
+}
+
+.chatParticipantInfo {
+    @apply flex-1 min-w-0;
+}
+
+.chatParticipantName {
+    @apply text-sm font-medium text-slate-900 dark:text-slate-100 truncate;
+}
+
+.chatParticipantStatus {
+    @apply text-xs text-slate-500 dark:text-slate-400;
+}
+
+.chatParticipantOnline {
+    @apply text-green-600 dark:text-green-400;
+}
+
+.chatParticipantOffline {
+    @apply text-slate-400 dark:text-slate-500;
+}
+
+
+/* ==================== CHAT SEARCH ==================== */
+
+.chatSearch {
+    @apply mb-4;
+}
+
+.chatSearchInput {
+    @apply w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:border-slate-600 dark:text-slate-100;
+}
+
+.chatSearchResults {
+    @apply space-y-1;
+}
+
+.chatSearchResult {
+    @apply p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-700 cursor-pointer;
+}
+
+
+/* ==================== CHAT MOBILE ==================== */
+
+.chatMobileHeader {
+    @apply lg:hidden flex items-center justify-between p-4 border-b border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800;
+}
+
+.chatMobileBackButton {
+    @apply p-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700;
+}
+
+.chatMobileMenu {
+    @apply p-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700;
+}
+
+
+/* ==================== CHAT ANIMATIONS ==================== */
+
+@keyframes messageSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.messageSlideIn {
+    animation: messageSlideIn 0.3s ease-out;
+}
+
+@keyframes typingPulse {
+    0%,
+    100% {
+        opacity: 0.4;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.typingPulse {
+    animation: typingPulse 1.4s ease-in-out infinite;
+}
+
+
+/* ==================== RESPONSIVE CHAT ==================== */
+
+@media (max-width: 1024px) {
+    .chatSidebar {
+        @apply hidden;
+    }
+    .chatContainer {
+        @apply w-full;
+    }
+}
+
+@media (max-width: 768px) {
+    .messageContent {
+        @apply max-w-[85%];
+    }
+    .messageContentOwn {
+        @apply max-w-[85%];
+    }
+    .chatInputContainer {
+        @apply space-x-2;
+    }
+    .chatInputActions {
+        @apply space-x-1;
+    }
+}
+
+@media (max-width: 640px) {
+    .messageContent {
+        @apply max-w-[90%];
+    }
+    .messageContentOwn {
+        @apply max-w-[90%];
+    }
+    .chatHeader {
+        @apply p-3;
+    }
+    .chatMessages {
+        @apply p-3;
+    }
+    .chatInput {
+        @apply p-3;
+    }
+}

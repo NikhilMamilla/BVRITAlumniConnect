@@ -1,0 +1,119 @@
+.communityContainer {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e3e6f3 100%);
+    display: flex;
+    flex-direction: column;
+}
+
+.communitySidebar {
+    background: linear-gradient(135deg, #e0e7ff 0%, #f0f4ff 100%);
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 24px 0 rgba(80, 80, 180, 0.08);
+    padding: 1.5rem 1rem;
+    margin-bottom: 2rem;
+    min-width: 220px;
+    max-width: 260px;
+    position: sticky;
+    top: 6rem;
+    height: fit-content;
+    transition: box-shadow 0.2s;
+}
+
+.communityMain {
+    flex: 1 1 0%;
+    background: #fff;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 32px 0 rgba(80, 80, 180, 0.10);
+    padding: 2.5rem 2rem;
+    margin: 0 auto;
+    min-width: 0;
+    max-width: 900px;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: box-shadow 0.2s;
+}
+
+.communityHeader {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    background: linear-gradient(90deg, #f5f7fa 60%, #e0e7ff 100%);
+    box-shadow: 0 4px 24px 0 rgba(80, 80, 180, 0.10);
+    padding: 0.5rem 0;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(8px) saturate(1.2);
+    border-bottom: 1.5px solid #e0e7ff;
+}
+
+.communityHeaderContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 0 2.5rem;
+    min-height: 72px;
+    width: 100%;
+}
+
+.communityBreadcrumb {
+    flex-shrink: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #2d2d4d;
+    margin-right: 2.5rem;
+    letter-spacing: 0.01em;
+    text-shadow: 0 2px 8px rgba(80, 80, 180, 0.04);
+}
+
+.communityHeaderContent>.flex {
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 1024px) {
+    .communityContainer {
+        padding: 0;
+    }
+    .communitySidebar {
+        display: none;
+    }
+    .communityMain {
+        padding: 1.2rem 0.5rem;
+        border-radius: 1rem;
+        box-shadow: 0 2px 12px 0 rgba(80, 80, 180, 0.10);
+        max-width: 100vw;
+    }
+    .communityHeaderContent {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0 1rem;
+    }
+    .communityBreadcrumb {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .communityMain {
+        padding: 0.5rem 0.2rem;
+        border-radius: 0.5rem;
+    }
+    .communityHeaderContent {
+        padding: 0 0.5rem;
+        min-height: 48px;
+    }
+}
+
+
+/* Remove horizontal scroll everywhere */
+
+body,
+html,
+.communityContainer,
+.communityMain {
+    overflow-x: hidden !important;
+}

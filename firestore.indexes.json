@@ -1,0 +1,1084 @@
+{
+    "indexes": [{
+            "collectionGroup": "communities",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "status", "order": "ASCENDING" },
+                { "fieldPath": "createdAt", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "communities",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "status", "order": "ASCENDING" },
+                { "fieldPath": "memberCount", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "communities",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "status", "order": "ASCENDING" },
+                { "fieldPath": "lastActivity", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "communities",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "status", "order": "ASCENDING" },
+                { "fieldPath": "category", "order": "ASCENDING" },
+                { "fieldPath": "createdAt", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "communities",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "status", "order": "ASCENDING" },
+                { "fieldPath": "tags", "order": "ASCENDING" },
+                { "fieldPath": "memberCount", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "communities",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "status", "order": "ASCENDING" },
+                { "fieldPath": "privacy", "order": "ASCENDING" },
+                { "fieldPath": "lastActivity", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "communities",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "createdBy", "order": "ASCENDING" },
+                { "fieldPath": "createdAt", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "communities",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "moderators", "order": "ASCENDING" },
+                { "fieldPath": "lastActivity", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "communityMembers",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "joinedAt", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "communityMembers",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "role", "order": "ASCENDING" },
+                { "fieldPath": "joinedAt", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "communityMembers",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "status", "order": "ASCENDING" },
+                { "fieldPath": "lastSeen", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "communityMembers",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "userId", "order": "ASCENDING" },
+                { "fieldPath": "status", "order": "ASCENDING" },
+                { "fieldPath": "joinedAt", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "communityMembers",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "userId", "order": "ASCENDING" },
+                { "fieldPath": "role", "order": "ASCENDING" },
+                { "fieldPath": "joinedAt", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "communityMembers",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "points", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "communityMembers",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "messageCount", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "chatMessages",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "createdAt", "order": "ASCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "chatMessages",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "createdAt", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "chatMessages",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "isDeleted", "order": "ASCENDING" },
+                { "fieldPath": "createdAt", "order": "ASCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "chatMessages",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "threadId", "order": "ASCENDING" },
+                { "fieldPath": "createdAt", "order": "ASCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "chatMessages",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "senderId", "order": "ASCENDING" },
+                { "fieldPath": "createdAt", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "chatMessages",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "messageType", "order": "ASCENDING" },
+                { "fieldPath": "createdAt", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "chatMessages",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "isPinned", "order": "ASCENDING" },
+                { "fieldPath": "createdAt", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "chatMessages",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "mentions", "order": "ASCENDING" },
+                { "fieldPath": "createdAt", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "discussions",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "createdAt", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "discussions",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "isPinned", "order": "ASCENDING" },
+                { "fieldPath": "createdAt", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "discussions",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "isResolved", "order": "ASCENDING" },
+                { "fieldPath": "lastActivity", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "discussions",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "category", "order": "ASCENDING" },
+                { "fieldPath": "createdAt", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "discussions",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "tags", "order": "ASCENDING" },
+                { "fieldPath": "upvotes", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "discussions",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "replyCount", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "discussions",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "authorId", "order": "ASCENDING" },
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "createdAt", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "discussionReplies",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "discussionId", "order": "ASCENDING" },
+                { "fieldPath": "createdAt", "order": "ASCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "discussionReplies",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "discussionId", "order": "ASCENDING" },
+                { "fieldPath": "upvotes", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "discussionReplies",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "discussionId", "order": "ASCENDING" },
+                { "fieldPath": "isAccepted", "order": "ASCENDING" },
+                { "fieldPath": "createdAt", "order": "ASCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "resources",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "createdAt", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "resources",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "isApproved", "order": "ASCENDING" },
+                { "fieldPath": "createdAt", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "resources",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "category", "order": "ASCENDING" },
+                { "fieldPath": "createdAt", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "resources",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "fileType", "order": "ASCENDING" },
+                { "fieldPath": "downloadCount", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "resources",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "tags", "order": "ASCENDING" },
+                { "fieldPath": "createdAt", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "resources",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "uploadedBy", "order": "ASCENDING" },
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "createdAt", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "communityEvents",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "startDate", "order": "ASCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "communityEvents",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "status", "order": "ASCENDING" },
+                { "fieldPath": "startDate", "order": "ASCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "communityEvents",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "eventType", "order": "ASCENDING" },
+                { "fieldPath": "startDate", "order": "ASCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "communityEvents",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "status", "order": "ASCENDING" },
+                { "fieldPath": "createdAt", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "communityEvents",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "organizerId", "order": "ASCENDING" },
+                { "fieldPath": "startDate", "order": "ASCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "eventAttendees",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "eventId", "order": "ASCENDING" },
+                { "fieldPath": "rsvpStatus", "order": "ASCENDING" },
+                { "fieldPath": "rsvpDate", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "eventAttendees",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "userId", "order": "ASCENDING" },
+                { "fieldPath": "rsvpStatus", "order": "ASCENDING" },
+                { "fieldPath": "rsvpDate", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "notifications",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "userId", "order": "ASCENDING" },
+                { "fieldPath": "createdAt", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "notifications",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "userId", "order": "ASCENDING" },
+                { "fieldPath": "isRead", "order": "ASCENDING" },
+                { "fieldPath": "createdAt", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "notifications",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "userId", "order": "ASCENDING" },
+                { "fieldPath": "type", "order": "ASCENDING" },
+                { "fieldPath": "createdAt", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "notifications",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "type", "order": "ASCENDING" },
+                { "fieldPath": "createdAt", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "userActivity",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "userId", "order": "ASCENDING" },
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "timestamp", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "userActivity",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "activityType", "order": "ASCENDING" },
+                { "fieldPath": "timestamp", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "userGameData",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "userId", "order": "ASCENDING" },
+                { "fieldPath": "communityId", "order": "ASCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "userGameData",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "totalPoints", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "userGameData",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "weeklyPoints", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "userGameData",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "monthlyPoints", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "moderationReports",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "status", "order": "ASCENDING" },
+                { "fieldPath": "createdAt", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "moderationReports",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "reportedUserId", "order": "ASCENDING" },
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "createdAt", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "moderationActions",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "actionType", "order": "ASCENDING" },
+                { "fieldPath": "createdAt", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "communityAnalytics",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "date", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "communityAnalytics",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "metricType", "order": "ASCENDING" },
+                { "fieldPath": "date", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "typingIndicators",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "lastTyped", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "onlinePresence",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "lastSeen", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "onlinePresence",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "isOnline", "order": "ASCENDING" },
+                { "fieldPath": "lastSeen", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "applications",
+            "queryScope": "COLLECTION",
+            "fields": [{
+                    "fieldPath": "studentId",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "appliedAt",
+                    "order": "DESCENDING"
+                }
+            ]
+        },
+        {
+            "collectionGroup": "applications",
+            "queryScope": "COLLECTION",
+            "fields": [{
+                    "fieldPath": "studentId",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "opportunityId",
+                    "order": "ASCENDING"
+                }
+            ]
+        },
+        {
+            "collectionGroup": "applications",
+            "queryScope": "COLLECTION",
+            "fields": [{
+                    "fieldPath": "opportunityId",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "appliedAt",
+                    "order": "DESCENDING"
+                }
+            ]
+        },
+        {
+            "collectionGroup": "events",
+            "queryScope": "COLLECTION",
+            "fields": [{
+                    "fieldPath": "alumniId",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "startTime",
+                    "order": "ASCENDING"
+                }
+            ]
+        },
+        {
+            "collectionGroup": "events",
+            "queryScope": "COLLECTION",
+            "fields": [{
+                    "fieldPath": "category",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "eventDate",
+                    "order": "ASCENDING"
+                }
+            ]
+        },
+        {
+            "collectionGroup": "events",
+            "queryScope": "COLLECTION",
+            "fields": [{
+                    "fieldPath": "category",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "eventType",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "eventDate",
+                    "order": "ASCENDING"
+                }
+            ]
+        },
+        {
+            "collectionGroup": "events",
+            "queryScope": "COLLECTION",
+            "fields": [{
+                    "fieldPath": "creatorId",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "eventDate",
+                    "order": "ASCENDING"
+                }
+            ]
+        },
+        {
+            "collectionGroup": "events",
+            "queryScope": "COLLECTION",
+            "fields": [{
+                    "fieldPath": "eventType",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "eventDate",
+                    "order": "ASCENDING"
+                }
+            ]
+        },
+        {
+            "collectionGroup": "events",
+            "queryScope": "COLLECTION",
+            "fields": [{
+                    "fieldPath": "mentorId",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "status",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "eventDate",
+                    "order": "ASCENDING"
+                }
+            ]
+        },
+        {
+            "collectionGroup": "events",
+            "queryScope": "COLLECTION",
+            "fields": [{
+                    "fieldPath": "status",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "eventDate",
+                    "order": "ASCENDING"
+                }
+            ]
+        },
+        {
+            "collectionGroup": "meetingRequests",
+            "queryScope": "COLLECTION",
+            "fields": [{
+                    "fieldPath": "mentorId",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "status",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "requestDate",
+                    "order": "DESCENDING"
+                }
+            ]
+        },
+        {
+            "collectionGroup": "meetingRequests",
+            "queryScope": "COLLECTION",
+            "fields": [{
+                    "fieldPath": "studentId",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "status",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "requestDate",
+                    "order": "DESCENDING"
+                }
+            ]
+        },
+        {
+            "collectionGroup": "meetings",
+            "queryScope": "COLLECTION",
+            "fields": [{
+                    "fieldPath": "mentorId",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "date",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "time",
+                    "order": "ASCENDING"
+                }
+            ]
+        },
+        {
+            "collectionGroup": "meetings",
+            "queryScope": "COLLECTION",
+            "fields": [{
+                    "fieldPath": "mentorId",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "status",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "date",
+                    "order": "DESCENDING"
+                }
+            ]
+        },
+        {
+            "collectionGroup": "meetings",
+            "queryScope": "COLLECTION",
+            "fields": [{
+                    "fieldPath": "studentId",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "date",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "time",
+                    "order": "ASCENDING"
+                }
+            ]
+        },
+        {
+            "collectionGroup": "meetings",
+            "queryScope": "COLLECTION",
+            "fields": [{
+                    "fieldPath": "studentId",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "status",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "date",
+                    "order": "DESCENDING"
+                }
+            ]
+        },
+        {
+            "collectionGroup": "meetings",
+            "queryScope": "COLLECTION",
+            "fields": [{
+                    "fieldPath": "status",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "date",
+                    "order": "DESCENDING"
+                }
+            ]
+        },
+        {
+            "collectionGroup": "meetings",
+            "queryScope": "COLLECTION",
+            "fields": [{
+                    "fieldPath": "type",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "date",
+                    "order": "DESCENDING"
+                }
+            ]
+        },
+        {
+            "collectionGroup": "mentors",
+            "queryScope": "COLLECTION",
+            "fields": [{
+                    "fieldPath": "status",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "name",
+                    "order": "ASCENDING"
+                }
+            ]
+        },
+        {
+            "collectionGroup": "mentors",
+            "queryScope": "COLLECTION",
+            "fields": [{
+                    "fieldPath": "specialization",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "rating",
+                    "order": "DESCENDING"
+                }
+            ]
+        },
+        {
+            "collectionGroup": "mentorshipRequests",
+            "queryScope": "COLLECTION",
+            "fields": [{
+                    "fieldPath": "mentorId",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "status",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "requestDate",
+                    "order": "DESCENDING"
+                }
+            ]
+        },
+        {
+            "collectionGroup": "mentorshipRequests",
+            "queryScope": "COLLECTION",
+            "fields": [{
+                    "fieldPath": "studentId",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "status",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "requestDate",
+                    "order": "DESCENDING"
+                }
+            ]
+        },
+        {
+            "collectionGroup": "mentorships",
+            "queryScope": "COLLECTION",
+            "fields": [{
+                    "fieldPath": "mentorId",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "status",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "startDate",
+                    "order": "DESCENDING"
+                }
+            ]
+        },
+        {
+            "collectionGroup": "mentorships",
+            "queryScope": "COLLECTION",
+            "fields": [{
+                    "fieldPath": "studentId",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "status",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "startDate",
+                    "order": "DESCENDING"
+                }
+            ]
+        },
+        {
+            "collectionGroup": "opportunities",
+            "queryScope": "COLLECTION",
+            "fields": [{
+                    "fieldPath": "status",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "createdAt",
+                    "order": "DESCENDING"
+                }
+            ]
+        },
+        {
+            "collectionGroup": "opportunities",
+            "queryScope": "COLLECTION",
+            "fields": [{
+                    "fieldPath": "category",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "deadline",
+                    "order": "ASCENDING"
+                }
+            ]
+        },
+        {
+            "collectionGroup": "opportunities",
+            "queryScope": "COLLECTION",
+            "fields": [{
+                    "fieldPath": "companyId",
+                    "order": "ASCENDING"
+                },
+                {
+                    "fieldPath": "createdAt",
+                    "order": "DESCENDING"
+                }
+            ]
+        },
+        {
+            "collectionGroup": "communityPosts",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "createdAt", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "community-events",
+            "queryScope": "COLLECTION_GROUP",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "startTime", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "event-rsvps",
+            "queryScope": "COLLECTION_GROUP",
+            "fields": [
+                { "fieldPath": "eventId", "order": "ASCENDING" },
+                { "fieldPath": "createdAt", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "event-rsvps",
+            "queryScope": "COLLECTION_GROUP",
+            "fields": [
+                { "fieldPath": "userId", "order": "ASCENDING" },
+                { "fieldPath": "createdAt", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "communities",
+            "queryScope": "COLLECTION_GROUP",
+            "fields": [
+                { "fieldPath": "category", "order": "ASCENDING" },
+                { "fieldPath": "memberCount", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "communities",
+            "queryScope": "COLLECTION_GROUP",
+            "fields": [
+                { "fieldPath": "category", "order": "ASCENDING" },
+                { "fieldPath": "lastActivity", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "communityMembers",
+            "queryScope": "COLLECTION_GROUP",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "role", "order": "ASCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "communityBans",
+            "queryScope": "COLLECTION_GROUP",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "communities",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "category", "order": "ASCENDING" },
+                { "fieldPath": "memberCount", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "communities",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "tags", "arrayConfig": "CONTAINS" },
+                { "fieldPath": "memberCount", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "communities",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "visibility", "order": "ASCENDING" },
+                { "fieldPath": "lastActivity", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "communityEvents",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "startTime", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "event-rsvps",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "eventId", "order": "ASCENDING" },
+                { "fieldPath": "userName", "order": "ASCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "communityMembers",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "status", "order": "ASCENDING" },
+                { "fieldPath": "lastActiveAt", "order": "DESCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "communityMembers",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "status", "order": "ASCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "chatMessages",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "communityId", "order": "ASCENDING" },
+                { "fieldPath": "authorId", "order": "ASCENDING" },
+                { "fieldPath": "type", "order": "ASCENDING" },
+                { "fieldPath": "createdAt", "order": "DESCENDING" }
+            ]
+        }
+    ],
+    "fieldOverrides": []
+}

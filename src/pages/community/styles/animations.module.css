@@ -1,0 +1,74 @@
+/* animations.module.css */
+
+
+/* ==================== FADE IN ==================== */
+
+.fadeIn {
+    @apply animate-fadeIn;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* ==================== SLIDE IN ==================== */
+
+.slideInUp {
+    @apply animate-slideInUp;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slideInLeft {
+    @apply animate-slideInLeft;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* ==================== SPIN ==================== */
+
+.spin {
+    @apply animate-spin;
+}
+
+
+/* ==================== PULSE ==================== */
+
+.pulse {
+    @apply animate-pulse;
+}
+
+
+/* ==================== BOUNCE ==================== */
+
+.bounce {
+    @apply animate-bounce;
+}
+
+
+/* Placeholder for animations styles */
